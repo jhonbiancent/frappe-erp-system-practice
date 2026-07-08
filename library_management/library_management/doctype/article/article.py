@@ -15,6 +15,7 @@ class Article(Document):
 		from frappe.types import DF
 
 		article_name: DF.Data
+		attach_image: DF.AttachImage | None
 		author: DF.Data | None
 		description: DF.TextEditor | None
 		isbn: DF.Data | None
