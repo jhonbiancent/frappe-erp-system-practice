@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_bulk_edit": 1,
- "allow_rename": 1,
+ "autoname": "UUID",
  "creation": "2026-07-09 21:38:03.560109",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -34,21 +34,24 @@
   {
    "fieldname": "email_address",
    "fieldtype": "Data",
-   "label": "Email Address"
+   "label": "Email Address",
+   "options": "Email\n"
   },
   {
    "fieldname": "phone",
    "fieldtype": "Data",
-   "label": "Phone"
+   "label": "Phone",
+   "options": "Phone"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-09 21:39:26.690625",
+ "modified": "2026-07-09 22:28:48.291885",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Library Member",
+ "naming_rule": "UUID",
  "owner": "Administrator",
  "permissions": [
   {

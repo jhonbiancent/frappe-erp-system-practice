@@ -2,16 +2,22 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
- "creation": "2026-07-09 21:56:54.147898",
+ "autoname": "LMS.#####",
+ "creation": "2026-07-09 22:37:08.244031",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_h70u",
+  "section_break_dw01",
+  "library_member",
+  "name1",
+  "from_date",
+  "to_date",
+  "paid",
   "amended_from"
  ],
  "fields": [
   {
-   "fieldname": "section_break_h70u",
+   "fieldname": "section_break_dw01",
    "fieldtype": "Section Break"
   },
   {
@@ -23,16 +29,48 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "library_member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Library Member",
+   "options": "Library Member",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "library_member.full_name",
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "paid",
+   "fieldtype": "Check",
+   "label": "Paid"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-07-09 21:56:54.147898",
+ "modified": "2026-07-09 23:20:00.264557",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Library Membership",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
