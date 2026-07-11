@@ -2,7 +2,7 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
- "autoname": "prompt",
+ "autoname": "field:article_name",
  "creation": "2026-07-08 18:55:18.365281",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -54,7 +54,8 @@
   {
    "fieldname": "status",
    "fieldtype": "Select",
-   "label": "Status"
+   "label": "Status",
+   "options": "Borrowed\nAvailable"
   },
   {
    "fieldname": "publisher",
@@ -73,11 +74,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-07-08 23:21:32.409872",
+ "modified": "2026-07-10 01:17:41.887956",
  "modified_by": "Administrator",
  "module": "Library Management",
  "name": "Article",
- "naming_rule": "Set by user",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

@@ -8,8 +8,7 @@ from frappe.model.document import Document
 class LibraryMember(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
-	def before_save(self):
-		self.full_name = f'{self.first_name} {self.last_name or ""}'
+
 	from typing import TYPE_CHECKING
 
 	if TYPE_CHECKING:

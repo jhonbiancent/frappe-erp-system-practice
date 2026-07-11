@@ -5,7 +5,7 @@
 from frappe.model.document import Document
 
 
-class Article(Document):
+class LibraryTransaction(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
 
@@ -14,13 +14,10 @@ class Article(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		article_name: DF.Data
-		attach_image: DF.AttachImage | None
-		author: DF.Data | None
-		description: DF.TextEditor | None
-		isbn: DF.Data | None
-		publisher: DF.Data | None
-		status: DF.Literal["Borrowed", "Available"]
+		article: DF.Link
+		date: DF.Date
+		library_member: DF.Link
+		type: DF.Literal["Issue", "Return"]
 	# end: auto-generated types
 
-	_DOCTYPE_NAME = "Article"
+	_DOCTYPE_NAME = "Library Transaction"
