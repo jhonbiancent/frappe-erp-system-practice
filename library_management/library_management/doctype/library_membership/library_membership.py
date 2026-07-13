@@ -8,7 +8,7 @@ from frappe.model.docstatus import DocStatus
 class LibraryMembership(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
-
+	# check before submitting this document
 	def before_save(self):
 		exists = frappe.db.exists(
 			"Library Membership",
@@ -21,6 +21,10 @@ class LibraryMembership(Document):
 		)
 		if exists: 
 			frappe.throw("There is an active membership for this member")
+		
+		# get loan period and compute to_date by adding loan_period to from_date 
+		loan_period = frappe.db.get_single_value("Library Settings", "loan_period")
+		self.to_date = frappe.utils.add_days(self.from_date, loan_period or 30)
 	
 	from typing import TYPE_CHECKING
 
